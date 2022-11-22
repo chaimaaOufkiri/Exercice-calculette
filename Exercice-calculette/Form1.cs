@@ -121,7 +121,7 @@ namespace Exercice_calculette
             }
             if (txtAffiche.Text == "")
             {
-                txtAffiche.Text = "0";
+                txtAffiche.Text = "0"; 
             } 
         }
         #endregion
