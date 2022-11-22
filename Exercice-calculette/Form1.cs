@@ -115,12 +115,14 @@ namespace Exercice_calculette
         private void btnDelete_Click(object sender, EventArgs e)
         {
 
-            if (this.txtAffiche.Text.Length < this.txtAffiche.SelectionStart + 1)
-                return;
-            var selectionStart = this.txtAffiche.SelectionStart;
-            this.txtAffiche.Text = this.txtAffiche.Text.Remove(this.txtAffiche.SelectionStart, 1);
-            this.txtAffiche.SelectionStart = selectionStart;
-            this.txtAffiche.SelectionLength = 0;
+            if (this.txtAffiche.Text.Length >0)
+            {
+                txtAffiche.Text = txtAffiche.Text.Remove(txtAffiche.Text.Length - 1, 1);
+            }
+            if (txtAffiche.Text == "")
+            {
+                txtAffiche.Text = "0";
+            } 
         }
         #endregion
 
