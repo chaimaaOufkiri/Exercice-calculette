@@ -17,7 +17,7 @@ namespace Exercice_calculette
         bool isoperation = false;
 
         #region Constructor
-        public Form1()
+        public Form1()  
         {
             InitializeComponent();
         }
