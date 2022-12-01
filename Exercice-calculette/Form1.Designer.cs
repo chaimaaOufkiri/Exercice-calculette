@@ -388,8 +388,10 @@ namespace Exercice_calculette
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.table1);
             this.Controls.Add(this.txtAffiche);
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Calculator";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.table1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

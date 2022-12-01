@@ -65,7 +65,7 @@ namespace Exercice_calculette
 
         private void btnegale_Click(object sender, EventArgs e)
         {
-
+        
             switch (operateur)
             {
                 case "+":
@@ -124,8 +124,32 @@ namespace Exercice_calculette
                 txtAffiche.Text = "0"; 
             } 
         }
-        #endregion
 
+        
 
-    }  
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Button button1 = new Button();
+            button1.Text = e.KeyChar.ToString();
+            if(e.KeyChar>= 48 && e.KeyChar <= 57)
+            {
+                btnNumber_Click(button1, e);
+            }
+            string operand = "/*+-";
+            if (operand.Contains(e.KeyChar))
+            {
+                btnOperation_Click(button1, e);
+            }
+            if (e.KeyChar == '=')
+            {
+                btnegale_Click(button1, e);
+            }
+            if(e.KeyChar=='\r')
+            {
+                button1.Text = "=";
+                btnegale_Click(button1, e);
+            }
+        }
+#endregion
+    }
 }
